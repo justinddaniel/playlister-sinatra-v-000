@@ -13,8 +13,8 @@
 
   <br></br>
 
-  <%@genres.each.with_index(1) do |g, i|%>
-    <input type="checkbox" name="<%= g.name %>" value="genre_#{i}" id="genre_#{i}"><%=g.name%></input>
+  <%@genres.each do |g|%>
+    <input type="checkbox" name="genres[]" value="<%= g.id %>" id="<%= g.name %>"><%=g.name%></input>
     <%end%>
 
     <br></br>
